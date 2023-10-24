@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ae360af17e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/showdata.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- swetalert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+
+
+    <title>Sidebar With Bootstrap</title>
+  </head>
+
+  <body ng-controller="ProductController">
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="h-100">
+          <div class="sidebar-logo">
+            <a href="#">Cambo Store</a>
+          </div>
+          <!-- Sidebar Navigation -->
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">Tools & Components</li>
+            <!-- <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#pages"
+                            aria-expanded="false" aria-controls="pages">
+                            <i class="fa-regular fa-file-lines pe-2"></i>
+                            Pages
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Analytics</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Ecommerce</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Crypto</a>
+                            </li>
+                        </ul>
+                    </li> -->
+            <li class="sidebar-item">
+              <a
+                href="#"
+                class="sidebar-link collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#dashboard"
+                aria-expanded="false"
+                aria-controls="dashboard"
+              >
+                <i class="fa-solid fa-sliders pe-2"></i>
+                Product
+              </a>
+              <ul
+                id="dashboard"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a href="showdata.html" class="sidebar-link">View Product</a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="addnew.html" class="sidebar-link">Add Product</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Main Component -->
+      <div class="main">
+        <nav
+          class="navbar navbar-expand px-3 border-bottom justify-content-between"
+        >
+          <!-- Button for sidebar toggle -->
+          <button class="btn" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav d-flex align-items-center flex-row">
+            <li class="nav-item">
+              <a
+                class="nav-link me-3 py-1"
+                href="#"
+                data-mdb-toggle="tooltip"
+                title="Create"
+              >
+                <i class="fas fa-video"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link me-3 py-1"
+                href="#"
+                data-mdb-toggle="tooltip"
+                title="YouTube apps"
+              >
+                <i class="fas fa-th"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3">
+              <a
+                class="nav-link py-1"
+                href="#"
+                data-mdb-toggle="tooltip"
+                title="Notifications"
+              >
+                <i class="fas fa-bell"></i>
+              </a>
+            </li>
+
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center py-1"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="image/DSC_0211.JPG"
+                  class="rounded-circle"
+                  height="30"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+                style="min-width: 19rem"
+              >
+                <li>
+                  <div class="px-3 pt-3 d-flex">
+                    <img
+                      src="image/DSC_0211.JPG"
+                      class="rounded-circle me-3"
+                      height="40"
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div>
+                      <h6 class="mb-0">Chy Sambo</h6>
+                      <p class="mb-2">sambochy.chy@gmail.com</p>
+                      <a class="mb-0" href="">Manage your Google Account</a>
+                    </div>
+                  </div>
+                  <hr class="mb-2" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-users-cog fa-fw me-3"></i
+                    ><span>Switch account</span
+                    ><i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-sign-out-alt me-3"></i
+                    ><span>Sign out</span></a
+                  >
+                </li>
+                <hr class="my-2" />
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-language fa-fw me-3"></i
+                    ><span>Language: English</span
+                    ><i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-globe fa-fw me-3"></i
+                    ><span>Location: United Kingdom</span
+                    ><i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-cog fa-fw me-3"></i
+                    ><span>Settings</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <main class="content px-3 py-2">
+          <div class="container-fluid">
+            <div class="mb-3 my-4 mx-5">
+              <h2><i>Add New Product</i></h2>
+            </div>
+            <div class="container shadow">
+              <div class="p-4 d-flex justify-content-between align-items-center">
+                <h2>ADD User</h2>
+
+                  <a href="showdata.html" class="btn btn-primary">Back</a>
+              </div>
+              <div class="pb-4 px-4">
+                <!-- Create User Form -->
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      ng-model="objNewUser.name"
+                      required
+                    /><label class="form-label">Price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      ng-model="objNewUser.price"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3"></div>
+                  <div class="mb-3">
+                    <label class="form-label">description</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      ng-model="objNewUser.description"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Image</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      ng-model="objNewUser.image"
+                      required
+                    />
+                  </div>
+                  <div class="d-flex">
+                    <button
+                      class="btn btn-success mx-2"
+                      type="submit"
+                      ng-click="createUser()"
+                    >
+                      Create User
+                    </button>
+                    <button class="btn btn-danger mx-2" type="submit">
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+
+    <script
+    
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <script src="js/adddata.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
